@@ -1,0 +1,9 @@
+deploy_staging:
+  type: deploy
+  environment:
+    name: production
+    url: 10.0.52.41
+  script:
+    - cd /var/www/test/success && git pull && exit
+  only:
+    - main
